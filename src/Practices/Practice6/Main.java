@@ -12,7 +12,7 @@ public class Main {
         restaurant.servePizza(magzhan);
         System.out.println();
 
-        Cat cat = new Cat();
+        Cat cat = new Cat("hashiroi");
         cat.move();
         restaurant.servePizza(cat);
     }

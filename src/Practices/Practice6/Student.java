@@ -4,8 +4,11 @@ import Practices.Practice6.Abstracts.Person;
 import Practices.Practice6.Interfaces.CanHavePizza;
 import Practices.Practice6.Interfaces.Movable;
 
+import java.util.Objects;
+
 public class Student extends Person implements CanHavePizza, Movable {
     int cash;
+    String name;
 
     public Student(String name, int cash) {
         super(name);
@@ -33,5 +36,25 @@ public class Student extends Person implements CanHavePizza, Movable {
 
     public int getCash() {
         return cash;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+
+
+        Student student = (Student) o;
+        return cash == student.cash && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, cash);
+    }
+
+    @Override
+    public String toString() {
+        return "name: " + name + ", cash: " + cash;
     }
 }

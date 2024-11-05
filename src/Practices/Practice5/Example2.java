@@ -1,3 +1,5 @@
+package Practices.Practice5;
+
 public class Example2 {
     public static void main(String[] args) {
 	int i, ratio;

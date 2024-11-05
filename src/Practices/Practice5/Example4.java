@@ -1,3 +1,5 @@
+package Practices.Practice5;
+
 import java.util.*;
 
 public class Example4
