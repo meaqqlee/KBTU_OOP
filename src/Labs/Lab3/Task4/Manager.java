@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Vector;
 
-public class Manager extends Employee {
-    private Vector<Employee> team;
+public class Manager extends Employee implements Comparable<Employee> {
+    private final Vector<Employee> team;
     private double bonus;
 
     public Manager(String name,
@@ -25,6 +25,10 @@ public class Manager extends Employee {
 
     public double getBonus() {
         return bonus;
+    }
+
+    public void addBonus(double bonus) {
+        this.bonus += bonus;
     }
 
     public Vector<Employee> getTeam() {
@@ -55,5 +59,15 @@ public class Manager extends Employee {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), bonus, team);
+    }
+
+    @Override
+    public int compareTo(Employee other) {
+        if(other instanceof Manager manager) {
+            if(Double.compare(this.getSalary(), manager.getSalary()) == 0) {
+                return Double.compare(this.getBonus(), manager.getBonus());
+            }
+        }
+        return super.compareTo(other);
     }
 }

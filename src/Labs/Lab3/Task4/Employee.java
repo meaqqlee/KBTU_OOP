@@ -1,13 +1,12 @@
 package Labs.Lab3.Task4;
 
-import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
 
 public class Employee extends Person implements Comparable<Employee>, Cloneable{
     private double salary;
-    private Date hireDate;
-    private String nationalInsuranceNumber;
+    private final Date hireDate;
+    private final String nationalInsuranceNumber;
 
     public Employee(String name,
                     double salary,
@@ -21,6 +20,10 @@ public class Employee extends Person implements Comparable<Employee>, Cloneable{
 
     public double getSalary() {
         return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     public Date getHireDate() {
@@ -66,7 +69,7 @@ public class Employee extends Person implements Comparable<Employee>, Cloneable{
     }
 
     @Override
-    public Employee clone() throws CloneNotSupportedException{
+    public Employee clone() throws CloneNotSupportedException {
         return (Employee) super.clone();
     }
 }

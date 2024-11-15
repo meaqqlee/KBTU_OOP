@@ -17,13 +17,13 @@ public class Chocolate implements Comparable<Chocolate> {
         return weight;
     }
 
+    public int compareTo(Chocolate other) {
+        return Double.compare(getWeight(), other.getWeight());
+    }
+
     public String toString() {
         return "Chocolate{name='" + getName() +
                 "', weight='" + getWeight() +
-                "'}";
-    }
-
-    public int compareTo(Chocolate other) {
-        return Double.compare(getWeight(), other.getWeight());
+                "g'}";
     }
 }
