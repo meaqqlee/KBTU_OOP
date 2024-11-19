@@ -5,18 +5,18 @@ import Labs.Lab3.Task6.People.*;
 
 public class InterfaceTest {
     public static void main(String[] args) {
-        Person john = new Employee("John", 30, "Engineer");
-        Animal murka = new Cat("Murka", 5);
+        Person Aktanberdi = new Employee("Aktanberdi", 30, "Engineer");
+        Animal kurama = new Cat("kurama", 5);
         Animal rex = new Dog("Rex", 3);
 
-        john.assignPet(murka);
-        john.assignPet(rex);
+        Aktanberdi.assignPet(kurama);
+        Aktanberdi.assignPet(rex);
 
-        System.out.println(john);
-        System.out.println("Murka says: " + murka.makeSound());
+        System.out.println(Aktanberdi);
+        System.out.println("kurama says: " + kurama.makeSound());
         System.out.println("Rex says: " + rex.makeSound());
 
-        Person alice = new PhDStudent("Alice", 26, "Comp. Science");
-        System.out.println("Comparing names of John and Alice: " + john.compareTo(alice));
+        Person Tilek = new PhDStudent("Tilek", 26, "Comp. Science");
+        System.out.println("Comparing names of Aktanberdi and Tilek: " + Aktanberdi.compareTo(Tilek));
     }
 }

@@ -6,43 +6,43 @@ import Labs.Lab3.Task6.VacationHandler;
 
 public class Test {
     public static void main(String[] args) {
-        Person john = new Employee("John", 30, "Engineer");
-        Person alice = new PhDStudent("Alice", 26, "Comp. Science");
-        Animal murka = new Cat("Murka", 5);
+        Person Aktanberdi = new Employee("Aktanberdi", 30, "Engineer");
+        Person Tilek = new PhDStudent("Tilek", 26, "Comp. Science");
+        Animal kurama = new Cat("kurama", 5);
         Animal rex = new Dog("Rex", 3);
         Animal tweety = new Bird("Tweety", 1);
 
-        john.assignPet(murka);
+        Aktanberdi.assignPet(kurama);
 
         //exception here
         //john.assignPet(rex);
-        john.assignPet(tweety);
+        Aktanberdi.assignPet(tweety);
 
         System.out.println("Before vacation:");
-        System.out.println(john);
-        System.out.println(alice);
+        System.out.println(Aktanberdi);
+        System.out.println(Tilek);
 
-        VacationHandler.leaveAllPetsWith(john, alice);
+        VacationHandler.leaveAllPetsWith(Aktanberdi, Tilek);
 
         System.out.println("During vacation:");
-        System.out.println(john);
-        System.out.println(alice);
+        System.out.println(Aktanberdi);
+        System.out.println(Tilek);
 
-        VacationHandler.retrieveAllPetsFrom(alice, john);
+        VacationHandler.retrieveAllPetsFrom(Tilek, Aktanberdi);
 
         System.out.println("After vacation:");
-        System.out.println(john);
-        System.out.println(alice);
+        System.out.println(Aktanberdi);
+        System.out.println(Tilek);
 
-        VacationHandler.leaveSpecificPetWith(john, alice, murka);
-        System.out.println("After leaving Murka with Alice:");
-        System.out.println(john);
-        System.out.println(alice);
+        VacationHandler.leaveSpecificPetWith(Aktanberdi, Tilek, kurama);
+        System.out.println("After leaving kurama with Tilek:");
+        System.out.println(Aktanberdi);
+        System.out.println(Tilek);
 
-        VacationHandler.retrieveSpecificPetFrom(alice, john, murka);
-        System.out.println("After retrieving Murka back:");
-        System.out.println(john);
-        System.out.println(alice);
+        VacationHandler.retrieveSpecificPetFrom(Tilek, Aktanberdi, kurama);
+        System.out.println("After retrieving kurama back:");
+        System.out.println(Aktanberdi);
+        System.out.println(Tilek);
     }
 }
 
